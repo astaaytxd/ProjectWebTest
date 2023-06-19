@@ -1,0 +1,20 @@
+@import "_variabel.scss";
+
+.btn-primary {
+  border: 2px solid $picton-blue;
+  outline: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  background-color: #fff;
+  color: $picton-blue;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.btn-primary:hover {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: $picton-blue;
+    color: #fff;
+  }
