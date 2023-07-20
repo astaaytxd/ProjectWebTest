@@ -624,7 +624,7 @@ body.active-popup .popup {
   position: relative;
   width: 100%;
   aspect-ratio: 9/16;
-  background: url(/src/assets/images/hp.png);
+  background: url(./src/assets/images/hp.png);
   background-size: cover;
   display: flex;
   align-items: center;
