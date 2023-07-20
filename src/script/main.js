@@ -4,7 +4,16 @@ $.getJSON("list.json", function (data) {
   let post = data.post;
   $.each(post, function (i, data) {
     $(".card-content .pagination").before(
-      `<div class="card"><div class="card-image"><img src="${data.img}" alt=""></div><div class="card-info"><h3>${data.title}</h3><p>${data.description}</p><a href="${data.link}" class="btn" target="_blank">Download</a></div></div>`
+      `<div class="card">
+      <div class="card-image">
+      <img src="${data.img}" alt="">
+      </div>
+      <div class="card-info">
+      <h3>${data.title}</h3>
+      <p>${data.description}</p>
+      <a href="${data.link}" class="btn" target="_blank">Download</a>
+      </div>
+      </div>`
     );
     const idPost = document.querySelectorAll(".card-content .card");
     const description = document.querySelectorAll(".card .card-info p");
@@ -167,9 +176,10 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       NavMenu.forEach((links) => {
         links.classList.remove("active");
-       const navList = document
-          .querySelector(".sidebar li .btn-nav[href*=" + id + "]")
-          navList.classList.add("active");
+        const navList = document.querySelector(
+          ".sidebar li .btn-nav[href*=" + id + "]"
+        );
+        navList.classList.add("active");
       });
     }
   });
@@ -179,11 +189,11 @@ const header = document.querySelector("nav");
 window.addEventListener("scroll", () => {
   header.classList.toggle("shadow", window.scrollY > 300);
 });
-const toTop = document.querySelector('.scrollTop');
+const toTop = document.querySelector(".scrollTop");
 window.addEventListener("scroll", () => {
   toTop.classList.toggle("active", window.scrollY > 300);
 });
 
-toTop.addEventListener('click',() => {
-  window.scrollTo(0,0)
-})
+toTop.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
